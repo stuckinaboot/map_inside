@@ -1,0 +1,12 @@
+Goal:
+1) Allow user to start/stop recording a floor plan
+-> Should result in a JSON floor plan object being obtained.
+2) Allow user to mark a point of interest
+3) Allow user to export a recorded floor plan
+-> Passes the JSON floor plan object to a backend, which ultimately puts it on AWS
+
+Screens:
+(1) Home Screen <-> (2) Floor Plan Recording Parameters Screen -> (3) Floor Plan Recording Screen -> (4) Floor Plan finished recording screen -> (5) Home Screen
+
+(3) -> Allows user to mark a point of interest. Displays a pop-up (or possibly another screen that when finished would dismiss) prompting the user for a name of the point of interest and a description
+(4) -> Gives user option to name the floor plan and upload the floor plan to AWS. Eventually should display the floor plan (that I may have to do because it’ll be lower-level drawing).

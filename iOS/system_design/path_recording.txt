@@ -1,0 +1,31 @@
+Goal:
+1) Get average user stride length by taking average stride length outside over a period of n = (some number) steps
+2) Get user’s compass direction
+3) Get number of steps user takes
+4) Generate floor plan representation file based off the previous data
+
+System Design:
+
+*May need to put this on a background thread (if we want to work with marking points of interest while continuing to move), we’ll see*
+
+classes:
+FloorPlanManager
+CompassManager
+PedometerManager
+
+FloorPlanBackendManager design:
+Instance of CompassManager
+Instance of PedometerManager
+Public Method startRecordingPath
+Public Method markPointOfInterest -> Takes in name and description of the point of interest as parameters
+Public Function stopRecordingPath -> returns the JSON object (not a file, a JSON object) representing the path, following the specifications of floor_plan_output.format.txt
+
+CompassManager:
+Public void startRecordingDirection -> Begins recording the user’s direction.
+Public void stopRecordingDirection -> Stops recording the user’s direction
+Delegate method directionReported -> Reports the user’s direction to the delegate
+Public Function getCurrentDirection -> Returns the current direction as an angle, where north is 0 degrees, east is 90 degrees, south is 180 degrees, etc.
+
+PedometerManager:
+Public bool startRecordingSteps -> Begins recording the user’s steps. Returns true if step counting is available (not all iOS devices have it). Takes in CMPedometerHandler block as input. This block should relay step information to the delegate.
+Public void stopRecordingSteps -> Stops recording the user’s steps
