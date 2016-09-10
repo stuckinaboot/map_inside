@@ -1,0 +1,20 @@
+Idea: An iOS app that is used to create indoor floor plans for buildings. These floor plans will then be uploaded to the cloud and will be explorable on a web platform.
+
+Floor plan: In the context of this project, a floor plan is the path recorded by the user traveling around a given floor (we can maybe normalize small curves in the users path), with special points of interest (as determined by the user) marked.
+
+Purpose: 
+There are really two main purposes for this app, one of them coming from personal experience -
+1) Allow anyone to create a floor plan for a building. This would make navigating buildings with many rooms (or many points of interest easier).
+2) Allow people to create personal floor plans (not uploaded to the cloud) for following certain paths in buildings. Such as the path from entrance to a certain doctor’s office (this tends to be complicated in places like NYC where there are many floors and rooms).
+
+Main Complication: Accounting for elevators/stairs. Stairs is easier because iOS accounts for that (although I’m not sure how accurate it is). For now, we should just use one floor and we can add the multi-floor ability in the future.
+
+iOS App: The user’s path will be recorded via an iOS app. Prior to using the app, the user will need to take n = 20 (n can be changed) steps outside so that we can calibrate the distance traveled (according to the gps) with the number of steps taken. We can decide if this is a one-time thing or if it should be repeated each time (due to varying gps signal strengths). Before the user enters the building, he will press a button marking his location so that the app knows the building (or in the beginning just the lat/long coordinates) for the floor-plan. The user’s path will be computed by taking the number of steps on the built-in pedometer and by analyzing his compass direction. Once the user finishes his path, he will be able to look at the computed floor-plan (possibly as an image or possibly as a JSON file displayed nicely as an image). Then, when he is finished, he presses upload and file will be sent to the cloud.
+* If time permits, could save for offline use. If time permits, could allow user to download floor plans from the cloud.
+
+The Cloud: AWS backend (unless you guys have other suggestions, this is the only cloud backend I am familiar with). I’ve done stuff with AWS but am not fully sure of optimal structure for what I am about to say next. I can talk to my dad about this. My current suggestion: a database where the keys are general latitude and longitudes (we’d have to look at the numbers, but maybe enough for a 1/2 mile by 1/2 mile square) and then values are another key-value pair where the key = latitude/longitude which is much more specific and the value = the actual floor plan (probably stored as a JSON file or an image).
+* Note: My suggestion comes from my completely ignorant view of how we would get a google maps overlay to show pins for floor plans (as described in the next step)
+
+Web Platform: NodeJS. There could be two versions to this. The first one is just so we can have something to show if we can’t get the second one working.
+1) Have a list of all available floor plans and when a user selects one, he can view the floor plan and the location where the floor plan was taken
+2) Build a Google Maps overlay and place pins (or some marker) where floor plans were taken, and when the user clicks the pin/marker a popover of some sort displays the floor plan. 

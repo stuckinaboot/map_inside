@@ -1,0 +1,41 @@
+Purpose: To provide a format for representing floor plans, such that the format could easily be interpreted on any platform capable of interpreting JSON.
+
+Format:
+
+{
+  "stride_length": some stride length in meters,
+  "path": [
+		angle of step 1 (all angles in radians), 
+		angle of step 2, 
+		angle of step 3,
+		{“Name of point of interest (located at the location of step 3)”: “description of point of interest”},
+		angle of step 4, 
+		...
+	   ],
+  "location": {
+    "latitude": some latitude as a double,
+    "longitude": some longitude as a double
+  },
+  “name”: “some name for the floor plan”
+}
+
+Ex:
+
+{
+  "stride_length": 0.5424,
+  "path": [
+		0.00102, 
+		0.00212, 
+		0.00122,
+		1.5821,
+		1.58932,
+		{“Rajivs Cafe”: “A great place to eat a great meal as you conquer the world”},
+		1.58912, 
+		...
+	   ],
+  "location": {
+    "latitude": 37.090240,
+    "longitude": -95.712891
+  },
+  “name”: “Rajivs secret lair”
+}
