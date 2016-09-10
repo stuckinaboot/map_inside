@@ -5,11 +5,11 @@ Format:
 {
   "stride_length": some stride length in meters,
   "path": [
-		angle of step 1 (all angles in degrees, since that's how compass direction is reported on iOS), 
-		angle of step 2, 
-		angle of step 3,
+		[distance of step 1, angle of step 1 (all angles in degrees, since that's how compass direction is reported on iOS)], 
+		[distance of step 2, angle of step 2], 
+		[distance of step 3, angle of step 3],
 		{“Name of point of interest (located at the location of step 3)”: “description of point of interest”},
-		angle of step 4, 
+		[distance of step 4, angle of step 4], 
 		...
 	   ],
   "location": {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A38F9E4D1D83D14B003AE794 /* FloorBackendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9E4C1D83D14B003AE794 /* FloorBackendManager.m */; };
+		A38F9E501D83D180003AE794 /* CompassManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9E4F1D83D180003AE794 /* CompassManager.m */; };
+		A38F9E531D83D18C003AE794 /* PedometerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9E521D83D18C003AE794 /* PedometerManager.m */; };
 		A3E217B01D838A3500464B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217AF1D838A3500464B34 /* main.m */; };
 		A3E217B31D838A3500464B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B21D838A3500464B34 /* AppDelegate.m */; };
 		A3E217B61D838A3500464B34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B51D838A3500464B34 /* ViewController.m */; };
@@ -15,9 +18,30 @@
 		A3E217BE1D838A3500464B34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3E217BC1D838A3500464B34 /* LaunchScreen.storyboard */; };
 		A3E217C61D838A5800464B34 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E217C51D838A5800464B34 /* CoreLocation.framework */; };
 		A3E217C81D838A5D00464B34 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E217C71D838A5D00464B34 /* CoreMotion.framework */; };
+		A3F9EE861D845BB500615E7E /* FloorPlanPreRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE841D845BB500615E7E /* FloorPlanPreRecordingViewController.m */; };
+		A3F9EE8B1D845C1000615E7E /* FloorPlanRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE8A1D845C1000615E7E /* FloorPlanRecordingViewController.m */; };
+		A3F9EE8E1D845C2300615E7E /* FloorPlanPostRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE8D1D845C2300615E7E /* FloorPlanPostRecordingViewController.m */; };
+		A3F9EE951D84627200615E7E /* CalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE941D84627200615E7E /* CalibrationViewController.m */; };
+		A3F9EE991D84714900615E7E /* CalibrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE981D84714900615E7E /* CalibrationManager.m */; };
+		A3F9EEAD1D847B0800615E7E /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE9D1D847B0800615E7E /* SCLAlertView.m */; };
+		A3F9EEAE1D847B0800615E7E /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EE9F1D847B0800615E7E /* SCLAlertViewResponder.m */; };
+		A3F9EEAF1D847B0800615E7E /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEA11D847B0800615E7E /* SCLAlertViewStyleKit.m */; };
+		A3F9EEB01D847B0800615E7E /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEA31D847B0800615E7E /* SCLButton.m */; };
+		A3F9EEB11D847B0800615E7E /* SCLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEA61D847B0800615E7E /* SCLSwitchView.m */; };
+		A3F9EEB21D847B0800615E7E /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEA81D847B0800615E7E /* SCLTextView.m */; };
+		A3F9EEB31D847B0800615E7E /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEAA1D847B0800615E7E /* SCLTimerDisplay.m */; };
+		A3F9EEB41D847B0800615E7E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEAC1D847B0800615E7E /* UIImage+ImageEffects.m */; };
+		A3F9EEBB1D8481FC00615E7E /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEB91D8481FC00615E7E /* PulsingHaloLayer.m */; };
+		A3F9EEBE1D84976300615E7E /* FloorPlanRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F9EEBD1D84976300615E7E /* FloorPlanRenderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A38F9E4B1D83D14B003AE794 /* FloorBackendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorBackendManager.h; sourceTree = "<group>"; };
+		A38F9E4C1D83D14B003AE794 /* FloorBackendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorBackendManager.m; sourceTree = "<group>"; };
+		A38F9E4E1D83D180003AE794 /* CompassManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassManager.h; sourceTree = "<group>"; };
+		A38F9E4F1D83D180003AE794 /* CompassManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassManager.m; sourceTree = "<group>"; };
+		A38F9E511D83D18C003AE794 /* PedometerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerManager.h; sourceTree = "<group>"; };
+		A38F9E521D83D18C003AE794 /* PedometerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerManager.m; sourceTree = "<group>"; };
 		A3E217AB1D838A3500464B34 /* MapInside.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapInside.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E217AF1D838A3500464B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3E217B11D838A3500464B34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,6 +54,38 @@
 		A3E217BF1D838A3500464B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3E217C51D838A5800464B34 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A3E217C71D838A5D00464B34 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		A3F9EE831D845BB500615E7E /* FloorPlanPreRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanPreRecordingViewController.h; sourceTree = "<group>"; };
+		A3F9EE841D845BB500615E7E /* FloorPlanPreRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanPreRecordingViewController.m; sourceTree = "<group>"; };
+		A3F9EE891D845C1000615E7E /* FloorPlanRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanRecordingViewController.h; sourceTree = "<group>"; };
+		A3F9EE8A1D845C1000615E7E /* FloorPlanRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanRecordingViewController.m; sourceTree = "<group>"; };
+		A3F9EE8C1D845C2300615E7E /* FloorPlanPostRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanPostRecordingViewController.h; sourceTree = "<group>"; };
+		A3F9EE8D1D845C2300615E7E /* FloorPlanPostRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanPostRecordingViewController.m; sourceTree = "<group>"; };
+		A3F9EE931D84627200615E7E /* CalibrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalibrationViewController.h; sourceTree = "<group>"; };
+		A3F9EE941D84627200615E7E /* CalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationViewController.m; sourceTree = "<group>"; };
+		A3F9EE971D84714900615E7E /* CalibrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalibrationManager.h; sourceTree = "<group>"; };
+		A3F9EE981D84714900615E7E /* CalibrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationManager.m; sourceTree = "<group>"; };
+		A3F9EE9C1D847B0800615E7E /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		A3F9EE9D1D847B0800615E7E /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		A3F9EE9E1D847B0800615E7E /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		A3F9EE9F1D847B0800615E7E /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		A3F9EEA01D847B0800615E7E /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		A3F9EEA11D847B0800615E7E /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		A3F9EEA21D847B0800615E7E /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		A3F9EEA31D847B0800615E7E /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		A3F9EEA41D847B0800615E7E /* SCLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMacros.h; sourceTree = "<group>"; };
+		A3F9EEA51D847B0800615E7E /* SCLSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLSwitchView.h; sourceTree = "<group>"; };
+		A3F9EEA61D847B0800615E7E /* SCLSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSwitchView.m; sourceTree = "<group>"; };
+		A3F9EEA71D847B0800615E7E /* SCLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTextView.h; sourceTree = "<group>"; };
+		A3F9EEA81D847B0800615E7E /* SCLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTextView.m; sourceTree = "<group>"; };
+		A3F9EEA91D847B0800615E7E /* SCLTimerDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTimerDisplay.h; sourceTree = "<group>"; };
+		A3F9EEAA1D847B0800615E7E /* SCLTimerDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTimerDisplay.m; sourceTree = "<group>"; };
+		A3F9EEAB1D847B0800615E7E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		A3F9EEAC1D847B0800615E7E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		A3F9EEB71D8481FC00615E7E /* PulsingHalo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHalo.h; sourceTree = "<group>"; };
+		A3F9EEB81D8481FC00615E7E /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
+		A3F9EEB91D8481FC00615E7E /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
+		A3F9EEBC1D84976300615E7E /* FloorPlanRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanRenderView.h; sourceTree = "<group>"; };
+		A3F9EEBD1D84976300615E7E /* FloorPlanRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanRenderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +101,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A38F9E541D83D190003AE794 /* Pedometer Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9E511D83D18C003AE794 /* PedometerManager.h */,
+				A38F9E521D83D18C003AE794 /* PedometerManager.m */,
+			);
+			name = "Pedometer Manager";
+			sourceTree = "<group>";
+		};
+		A38F9E551D83D197003AE794 /* Compass Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9E4E1D83D180003AE794 /* CompassManager.h */,
+				A38F9E4F1D83D180003AE794 /* CompassManager.m */,
+			);
+			name = "Compass Manager";
+			sourceTree = "<group>";
+		};
+		A38F9E561D83D19C003AE794 /* Floor Backend Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9E551D83D197003AE794 /* Compass Manager */,
+				A38F9E541D83D190003AE794 /* Pedometer Manager */,
+				A38F9E581D83D1B0003AE794 /* Manager */,
+			);
+			name = "Floor Backend Manager";
+			sourceTree = "<group>";
+		};
+		A38F9E571D83D1A3003AE794 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9E561D83D19C003AE794 /* Floor Backend Manager */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		A38F9E581D83D1B0003AE794 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9E4B1D83D14B003AE794 /* FloorBackendManager.h */,
+				A38F9E4C1D83D14B003AE794 /* FloorBackendManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		A3E217A21D838A3500464B34 = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +167,9 @@
 			children = (
 				A3E217B11D838A3500464B34 /* AppDelegate.h */,
 				A3E217B21D838A3500464B34 /* AppDelegate.m */,
-				A3E217B41D838A3500464B34 /* ViewController.h */,
-				A3E217B51D838A3500464B34 /* ViewController.m */,
+				A3F9EE811D845B7200615E7E /* Front-end */,
 				A3E217B71D838A3500464B34 /* Main.storyboard */,
+				A38F9E571D83D1A3003AE794 /* Backend */,
 				A3E217BA1D838A3500464B34 /* Assets.xcassets */,
 				A3E217BC1D838A3500464B34 /* LaunchScreen.storyboard */,
 				A3E217BF1D838A3500464B34 /* Info.plist */,
@@ -80,11 +181,124 @@
 		A3E217AE1D838A3500464B34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3F9EEB51D8481FC00615E7E /* PulsingHalo */,
+				A3F9EE9B1D847B0800615E7E /* SCLAlertView */,
 				A3E217C71D838A5D00464B34 /* CoreMotion.framework */,
 				A3E217C51D838A5800464B34 /* CoreLocation.framework */,
 				A3E217AF1D838A3500464B34 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3F9EE811D845B7200615E7E /* Front-end */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE821D845B7D00615E7E /* Home */,
+				A3F9EE881D845BB800615E7E /* PreRecording Path Controller */,
+				A3F9EE901D845C3100615E7E /* Recording Path Controller */,
+				A3F9EE8F1D845C2700615E7E /* PostRecording Path Controller */,
+			);
+			name = "Front-end";
+			sourceTree = "<group>";
+		};
+		A3F9EE821D845B7D00615E7E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A3E217B41D838A3500464B34 /* ViewController.h */,
+				A3E217B51D838A3500464B34 /* ViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		A3F9EE881D845BB800615E7E /* PreRecording Path Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE831D845BB500615E7E /* FloorPlanPreRecordingViewController.h */,
+				A3F9EE841D845BB500615E7E /* FloorPlanPreRecordingViewController.m */,
+				A3F9EE961D84627500615E7E /* Calibration Controller */,
+			);
+			name = "PreRecording Path Controller";
+			sourceTree = "<group>";
+		};
+		A3F9EE8F1D845C2700615E7E /* PostRecording Path Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE8C1D845C2300615E7E /* FloorPlanPostRecordingViewController.h */,
+				A3F9EE8D1D845C2300615E7E /* FloorPlanPostRecordingViewController.m */,
+				A3F9EEBF1D84976600615E7E /* Floor Plan Render View */,
+			);
+			name = "PostRecording Path Controller";
+			sourceTree = "<group>";
+		};
+		A3F9EE901D845C3100615E7E /* Recording Path Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE891D845C1000615E7E /* FloorPlanRecordingViewController.h */,
+				A3F9EE8A1D845C1000615E7E /* FloorPlanRecordingViewController.m */,
+			);
+			name = "Recording Path Controller";
+			sourceTree = "<group>";
+		};
+		A3F9EE961D84627500615E7E /* Calibration Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE931D84627200615E7E /* CalibrationViewController.h */,
+				A3F9EE941D84627200615E7E /* CalibrationViewController.m */,
+				A3F9EE9A1D84714C00615E7E /* Calibration Manager */,
+			);
+			name = "Calibration Controller";
+			sourceTree = "<group>";
+		};
+		A3F9EE9A1D84714C00615E7E /* Calibration Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE971D84714900615E7E /* CalibrationManager.h */,
+				A3F9EE981D84714900615E7E /* CalibrationManager.m */,
+			);
+			name = "Calibration Manager";
+			sourceTree = "<group>";
+		};
+		A3F9EE9B1D847B0800615E7E /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EE9C1D847B0800615E7E /* SCLAlertView.h */,
+				A3F9EE9D1D847B0800615E7E /* SCLAlertView.m */,
+				A3F9EE9E1D847B0800615E7E /* SCLAlertViewResponder.h */,
+				A3F9EE9F1D847B0800615E7E /* SCLAlertViewResponder.m */,
+				A3F9EEA01D847B0800615E7E /* SCLAlertViewStyleKit.h */,
+				A3F9EEA11D847B0800615E7E /* SCLAlertViewStyleKit.m */,
+				A3F9EEA21D847B0800615E7E /* SCLButton.h */,
+				A3F9EEA31D847B0800615E7E /* SCLButton.m */,
+				A3F9EEA41D847B0800615E7E /* SCLMacros.h */,
+				A3F9EEA51D847B0800615E7E /* SCLSwitchView.h */,
+				A3F9EEA61D847B0800615E7E /* SCLSwitchView.m */,
+				A3F9EEA71D847B0800615E7E /* SCLTextView.h */,
+				A3F9EEA81D847B0800615E7E /* SCLTextView.m */,
+				A3F9EEA91D847B0800615E7E /* SCLTimerDisplay.h */,
+				A3F9EEAA1D847B0800615E7E /* SCLTimerDisplay.m */,
+				A3F9EEAB1D847B0800615E7E /* UIImage+ImageEffects.h */,
+				A3F9EEAC1D847B0800615E7E /* UIImage+ImageEffects.m */,
+			);
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		A3F9EEB51D8481FC00615E7E /* PulsingHalo */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EEB71D8481FC00615E7E /* PulsingHalo.h */,
+				A3F9EEB81D8481FC00615E7E /* PulsingHaloLayer.h */,
+				A3F9EEB91D8481FC00615E7E /* PulsingHaloLayer.m */,
+			);
+			path = PulsingHalo;
+			sourceTree = "<group>";
+		};
+		A3F9EEBF1D84976600615E7E /* Floor Plan Render View */ = {
+			isa = PBXGroup;
+			children = (
+				A3F9EEBC1D84976300615E7E /* FloorPlanRenderView.h */,
+				A3F9EEBD1D84976300615E7E /* FloorPlanRenderView.m */,
+			);
+			name = "Floor Plan Render View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +371,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F9EEBB1D8481FC00615E7E /* PulsingHaloLayer.m in Sources */,
 				A3E217B61D838A3500464B34 /* ViewController.m in Sources */,
+				A3F9EEAE1D847B0800615E7E /* SCLAlertViewResponder.m in Sources */,
+				A3F9EEB41D847B0800615E7E /* UIImage+ImageEffects.m in Sources */,
+				A38F9E531D83D18C003AE794 /* PedometerManager.m in Sources */,
+				A3F9EEAD1D847B0800615E7E /* SCLAlertView.m in Sources */,
+				A3F9EE8E1D845C2300615E7E /* FloorPlanPostRecordingViewController.m in Sources */,
+				A3F9EE951D84627200615E7E /* CalibrationViewController.m in Sources */,
+				A38F9E501D83D180003AE794 /* CompassManager.m in Sources */,
+				A3F9EEB21D847B0800615E7E /* SCLTextView.m in Sources */,
+				A3F9EE991D84714900615E7E /* CalibrationManager.m in Sources */,
+				A3F9EE861D845BB500615E7E /* FloorPlanPreRecordingViewController.m in Sources */,
+				A3F9EEB11D847B0800615E7E /* SCLSwitchView.m in Sources */,
+				A3F9EEAF1D847B0800615E7E /* SCLAlertViewStyleKit.m in Sources */,
+				A38F9E4D1D83D14B003AE794 /* FloorBackendManager.m in Sources */,
+				A3F9EEB31D847B0800615E7E /* SCLTimerDisplay.m in Sources */,
 				A3E217B31D838A3500464B34 /* AppDelegate.m in Sources */,
+				A3F9EEBE1D84976300615E7E /* FloorPlanRenderView.m in Sources */,
+				A3F9EE8B1D845C1000615E7E /* FloorPlanRecordingViewController.m in Sources */,
+				A3F9EEB01D847B0800615E7E /* SCLButton.m in Sources */,
 				A3E217B01D838A3500464B34 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +542,7 @@
 				A3E217C41D838A3500464B34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

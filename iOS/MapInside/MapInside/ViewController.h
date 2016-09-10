@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FloorBackendManager.h"
+#import "FloorPlanPreRecordingViewController.h"
 
-@interface ViewController : UIViewController
+static const NSString *kSegueToPreRecording = @"HomeToPreRecordingSegue";
+@interface ViewController : UIViewController {
+    FloorPlanPreRecordingViewController *preRecordingViewController;
+}
 
-
+@property (nonatomic, strong) FloorBackendManager *backendManager;
+- (IBAction)goToPreRecording:(id)sender;
 @end
 
