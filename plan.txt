@@ -7,7 +7,7 @@ There are really two main purposes for this app, one of them coming from persona
 1) Allow anyone to create a floor plan for a building. This would make navigating buildings with many rooms (or many points of interest easier).
 2) Allow people to create personal floor plans (not uploaded to the cloud) for following certain paths in buildings. Such as the path from entrance to a certain doctor’s office (this tends to be complicated in places like NYC where there are many floors and rooms).
 
-Main Complication: Accounting for elevators/stairs. Stairs is easier because iOS accounts for that (although I’m not sure how accurate it is). For now, we should just use one floor and we can add the multi-floor ability in the future.
+Main Difficulty Worth Mentioning that We Will Disregard for Now: Accounting for elevators/stairs. Stairs is easier because iOS accounts for that (although I’m not sure how accurate it is). For now, we should just use one floor and we can add the multi-floor ability in the future.
 
 iOS App: The user’s path will be recorded via an iOS app. Prior to using the app, the user will need to take n = 20 (n can be changed) steps outside so that we can calibrate the distance traveled (according to the gps) with the number of steps taken. We can decide if this is a one-time thing or if it should be repeated each time (due to varying gps signal strengths). Before the user enters the building, he will press a button marking his location so that the app knows the building (or in the beginning just the lat/long coordinates) for the floor-plan. The user’s path will be computed by taking the number of steps on the built-in pedometer and by analyzing his compass direction. Once the user finishes his path, he will be able to look at the computed floor-plan (possibly as an image or possibly as a JSON file displayed nicely as an image). Then, when he is finished, he presses upload and file will be sent to the cloud.
 * If time permits, could save for offline use. If time permits, could allow user to download floor plans from the cloud.
@@ -18,3 +18,27 @@ The Cloud: AWS backend (unless you guys have other suggestions, this is the only
 Web Platform: NodeJS. There could be two versions to this. The first one is just so we can have something to show if we can’t get the second one working.
 1) Have a list of all available floor plans and when a user selects one, he can view the floor plan and the location where the floor plan was taken
 2) Build a Google Maps overlay and place pins (or some marker) where floor plans were taken, and when the user clicks the pin/marker a popover of some sort displays the floor plan. 
+
+
+Links (Don’t wanna speak too soon but for iOS, may not need these - Aspyn)
+Apis
+https://developer.mapquest.com/documentation/
+https://www.indooratlas.com/our-customers/
+http://openlayers.org/
+https://developers.google.com/tango/overview/area-learning#top_of_page
+http://www.webmapsolutions.com/indoor-gis-mapping-simple
+https://developer.here.com/
+
+
+Other links of interest 
+https://support.google.com/maps/answer/2803784?p=gmm_guidelines&rd=1
+https://en.wikipedia.org/wiki/Geographic_information_system
+http://www.phila.gov/it/aboutus/units/Pages/GISServicesGroup.aspx
+http://openlayers.org/
+https://www.arcgis.com/features/index.html
+http://www.esri.com/esri-news/arcwatch/1115/mapping-indoor-building-space-is-a-smart-business-move
+
+Hardware
+
+	-Connected measuring wheel
+	-Laser range finder 

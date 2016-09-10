@@ -1,0 +1,13 @@
+*I’m not trying to take charge here. I just believe that the last few PennApps we didn’t distribute work properly and so I’ve come up with some tentative designations for who does what (at least initially until we are all there) - Aspyn*
+*If you really disagree with it, feel free to disregard it*
+
+Emmett - Frontend for iOS app. Not sure if you know JS but you could also help Fischer since for online there will definitely need to be some research done into displaying something over Google Maps.
+—> I came up with a basic UX flow (located in iOS/system_design/front_end.txt). I think it should be good but if you have other ideas feel free to use those.
+
+Aspyn - Backend for iOS app. The actual displaying of the floor plan on iOS may need to be done with some lower-level drawing, I could work on that with Emmett (but we’ll discuss that when we are all there).
+
+Fischer - Web platform.
+
+Max - Range finder.
+
+Note: plan.txt and floor_plan_output.format.txt is stored in the GitHub.
