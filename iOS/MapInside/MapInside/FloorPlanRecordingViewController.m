@@ -85,14 +85,34 @@
     [pulsingHalo start];
     
     if (singleDeviceManager) {
+        
+        CGRect screen = [[UIScreen mainScreen] bounds];
+        
         [singleDeviceManager setUpdateHandler:^(NSData *data, NSError *error) {
+            float scrWidth = screen.size.width;
+            float scrHeight = screen.size.height;
+            float currentFoot = 1.0;
+
             if (data && isWalking) {
                 NSString *readableStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 double compassDirection = [backendManager getCompassDirection];
                 
+
+                
                 NSString *travelStr = [NSString stringWithFormat:@"%@, %.02f", readableStr, compassDirection];
                 
                 //Call Fischer's view with the travelStr
+                NSArray *comps = [travelStr componentsSeparatedByString:@","];
+                if ([[comps objectAtIndex:0] floatValue] > 0.0) {
+                    float ltX = scrWidth/2.0 - [[comps objectAtIndex:0] floatValue];
+                    [self drawDotWithRadius:1.0 atX:ltX atY:scrHeight - 3*currentFoot];
+                }
+                if ([[comps objectAtIndex:1] floatValue] > 0.0) {
+                    float rtX = scrWidth/2.0 + [[comps objectAtIndex:1] floatValue];
+                    [self drawDotWithRadius:1.0 atX:rtX atY:scrHeight - 3*currentFoot];
+                }
+                currentFoot++;
+
                 [fullOutput appendFormat:@"%@\n", travelStr];
             }
         }];
@@ -105,10 +125,27 @@
 }
 
 - (void)updateRecording {
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    float scrWidth = screen.size.width;
+    float scrHeight = screen.size.height;
+    float currentFoot = 1.0;
+    
     if (isWalking) {
         NSString *travelStr = [backendManager markPoint];
         
         //Call Fischer's view with the travelStr
+        NSArray *comps = [travelStr componentsSeparatedByString:@","];
+        if ([[comps objectAtIndex:0] floatValue] > 0.0) {
+            float ltX = scrWidth/2.0 - [[comps objectAtIndex:0] floatValue];
+            [self drawDotWithRadius:1.0 atX:ltX atY:scrHeight - 3*currentFoot];
+        }
+        if ([[comps objectAtIndex:1] floatValue] > 0.0) {
+            float rtX = scrWidth/2.0 + [[comps objectAtIndex:1] floatValue];
+            [self drawDotWithRadius:1.0 atX:rtX atY:scrHeight - 3*currentFoot];
+        }
+        currentFoot++;
+
+        
         [fullOutput appendFormat:@"%@\n", travelStr];
     }
 }
@@ -154,6 +191,33 @@
         NSString *finalOutput = [NSString stringWithFormat:@"%@%@", locStr, fullOutput];
         [vc setFloorPlanFullOutput:finalOutput];
     }
+}
+
+#pragma mark - Drawing
+- (void)drawDotWithRadius:(float)radius atX:(float)xcor atY:(float)ycor {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [[UIColor blueColor] CGColor];
+    shapeLayer.fillColor = [[UIColor blueColor] CGColor];
+    shapeLayer.lineWidth = 2.0;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(xcor, ycor, radius, radius)];
+    shapeLayer.path = [path CGPath];
+    
+    [self.view.layer addSublayer:shapeLayer];
+}
+
+- (void)drawLineFromX:(float)xcor1 Y:(float)ycor1 toX:(float)xcor2 Y: (float)ycor2 {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [[UIColor blackColor] CGColor];
+    shapeLayer.fillColor = [[UIColor blackColor] CGColor];
+    shapeLayer.lineWidth = 1.0;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(xcor1, ycor1)];
+    [path addLineToPoint:CGPointMake(xcor2, ycor2)];
+    
+    shapeLayer.path = [path CGPath];
+    [self.view.layer addSublayer:shapeLayer];
 }
 
 @end

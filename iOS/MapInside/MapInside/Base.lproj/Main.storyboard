@@ -277,7 +277,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-2K-Ldc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-2K-Ldc">
                                 <rect key="frame" x="111" y="20" width="380" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="9ta-Vn-MZc"/>
@@ -292,7 +292,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-gi-3cS" customClass="MVMaterialButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-gi-3cS" customClass="MVMaterialButton">
                                 <rect key="frame" x="111" y="96" width="379" height="58"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -312,7 +312,7 @@
                                     <action selector="markPoint:" destination="6BE-Df-TEl" eventType="touchUpInside" id="coH-ek-UPn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-Dr-WCN" customClass="MVMaterialButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-Dr-WCN" customClass="MVMaterialButton">
                                 <rect key="frame" x="112" y="507" width="377" height="80"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -327,13 +327,10 @@
                                     <segue destination="DtY-Rs-hbb" kind="show" identifier="RecordingToPostRecordingSegue" id="eDx-rf-aMB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k0h-DH-c6W">
-                                <rect key="frame" x="111" y="261" width="379" height="229"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="379" id="AMq-mz-hxI"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0h-DH-c6W">
+                                <rect key="frame" x="111" y="261" width="380" height="228"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-94-DQP" customClass="MVMaterialButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-94-DQP" customClass="MVMaterialButton">
                                 <rect key="frame" x="112" y="180" width="378" height="58"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
