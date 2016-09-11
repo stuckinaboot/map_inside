@@ -45,6 +45,8 @@
 
 - (void)segmentedControl:(APSegmentedControl *)segmentedControl buttonSelectedForButtonName:(NSString *)btnName {
     if ([segmentedControl isEqual:dataInputControl]) {
+        //Disgregard bluetooth
+        return;
         if ([btnName isEqualToString:kDataInputControlTypeNameBluetooth]) {
             if (!singleDeviceManager) {
                 singleDeviceManager = [[LGSingleDeviceManager alloc] init];

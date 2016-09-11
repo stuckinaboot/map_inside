@@ -26,9 +26,9 @@
     //Call Fischer's view with the travelStr
     NSArray *comps = [travelStr componentsSeparatedByString:@","];
     
-    float compL = [[[comps objectAtIndex:0] substringFromIndex:[[comps objectAtIndex:0] rangeOfString:@" "options:NSBackwardsSearch].location + 1] floatValue];
-    
-    float compR = [[[comps objectAtIndex:1] substringFromIndex:[[comps objectAtIndex:1] rangeOfString:@" " options:NSBackwardsSearch].location + 1] floatValue];
+//    float compL = [[[comps objectAtIndex:0] substringFromIndex:[[comps objectAtIndex:0] rangeOfString:@" "options:NSBackwardsSearch].location + 1] floatValue];
+//    
+////    float compR = [[[comps objectAtIndex:1] substringFromIndex:[[comps objectAtIndex:1] rangeOfString:@" " options:NSBackwardsSearch].location + 1] floatValue];
     
     NSString *angleStr = [comps objectAtIndex:[comps count] - 1];
     float angle = [[angleStr substringFromIndex:[angleStr rangeOfString:@" " options:NSBackwardsSearch].location + 1] floatValue];
@@ -48,7 +48,6 @@
         angle += 360.0f;
     if (angle > 360)
         angle -= 360.0f;
-    NSLog(@"%f", angle);
     
     float angleInRadians = DEGREES_TO_RADIANS(angle);
     
@@ -58,14 +57,14 @@
     
     CGPoint newPt = CGPointMake(prevPt.x + delta.x, prevPt.y + delta.y);
 
-    if (compL >= 0.0) {
-        float ltX = newPt.x - compL;
-        [self drawDotWithRadius:1.0f atX:ltX atY:newPt.y];
-    }
-    if (compR >= 0.0) {
-        float rtX = newPt.x + compR;
-        [self drawDotWithRadius:1.0f atX:rtX atY:newPt.y];
-    }
+//    if (compL >= 0.0) {
+//        float ltX = newPt.x - compL;
+        [self drawDotWithRadius:1.0f atX:newPt.x atY:newPt.y];
+//    }
+//    if (compR >= 0.0) {
+//        float rtX = newPt.x + compR;
+//        [self drawDotWithRadius:1.0f atX:rtX atY:newPt.y];
+//    }
     prevPt = newPt;
 }
 

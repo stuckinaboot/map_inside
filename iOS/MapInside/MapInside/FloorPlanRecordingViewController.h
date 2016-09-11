@@ -14,7 +14,7 @@
 #import "LGBluetooth/LGSingleDeviceManager.h"
 #import "FloorPlanDisplayView.h"
 
-static const float kNearestMultiple = 30.0f;
+static const float kNearestMultiple = 45.0f;
 static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
 @interface FloorPlanRecordingViewController : UIViewController {
     FloorBackendManager *backendManager;
