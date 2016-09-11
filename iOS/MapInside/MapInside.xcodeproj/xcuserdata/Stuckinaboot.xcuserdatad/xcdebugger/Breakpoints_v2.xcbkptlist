@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/LocationManager.m"
-            timestampString = "495270917.645272"
+            filePath = "MapInside/LGBluetooth/LGCentralManager.m"
+            timestampString = "495285909.195205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-locationManager:didUpdateLocations:"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-scanForPeripheralsWithServices:options:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/LocationManager.m"
-            timestampString = "495270917.645272"
+            filePath = "MapInside/LGBluetooth/LGSingleDeviceManager.m"
+            timestampString = "495286076.11285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-startUpdating"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-searchForDevice:completion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/LocationManager.m"
-            timestampString = "495270917.645272"
+            filePath = "MapInside/FloorPlanPreRecordingViewController.m"
+            timestampString = "495289121.088848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-locationManager:didUpdateLocations:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-segmentedControl:buttonSelectedForButtonName:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MapInside/FloorPlanRecordingViewController.m"
+            timestampString = "495319891.299223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-markPoint:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MapInside/FloorPlanRecordingViewController.m"
+            timestampString = "495319891.299223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-beginRecordingOnBackend"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MapInside/FloorPlanRecordingViewController.m"
+            timestampString = "495319891.299223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "-updateRecording"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

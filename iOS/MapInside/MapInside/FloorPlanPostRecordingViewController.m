@@ -24,13 +24,21 @@
 }
 
 - (void)setFloorPlanFullOutput:(NSString *)output {
-    floorPlanFullOutput = output;
+    floorPlanFullOutput = [output stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    renderedFloorPlan = FALSE;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-//    [floorPlanRenderView renderFloorPlan:floorPlanJson];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (!renderedFloorPlan) {
+        [floorPlanDisplayView setUp];
+        NSArray *components = [floorPlanFullOutput componentsSeparatedByString:@"\n"];
+        for (int i = 1; i < [components count]; i++) {
+            NSString *travelStr = components[i];
+            [floorPlanDisplayView updateDrawingForTravelStr:travelStr];
+        }
+        renderedFloorPlan = TRUE;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

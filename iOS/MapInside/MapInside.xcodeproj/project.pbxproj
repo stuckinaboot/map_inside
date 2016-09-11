@@ -23,6 +23,7 @@
 		A3D105021D850DA500AC2BA2 /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D104FB1D850DA500AC2BA2 /* LGUtils.m */; };
 		A3D105051D852DEB00AC2BA2 /* MVMaterialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D105041D852DEB00AC2BA2 /* MVMaterialButton.m */; };
 		A3D105091D8533DA00AC2BA2 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D105081D8533DA00AC2BA2 /* LocationManager.m */; };
+		A3D1050D1D8541C700AC2BA2 /* FloorPlanDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D1050C1D8541C700AC2BA2 /* FloorPlanDisplayView.m */; };
 		A3E217B01D838A3500464B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217AF1D838A3500464B34 /* main.m */; };
 		A3E217B31D838A3500464B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B21D838A3500464B34 /* AppDelegate.m */; };
 		A3E217B61D838A3500464B34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B51D838A3500464B34 /* ViewController.m */; };
@@ -80,6 +81,8 @@
 		A3D105041D852DEB00AC2BA2 /* MVMaterialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVMaterialButton.m; sourceTree = "<group>"; };
 		A3D105071D8533DA00AC2BA2 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		A3D105081D8533DA00AC2BA2 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		A3D1050B1D8541C700AC2BA2 /* FloorPlanDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanDisplayView.h; sourceTree = "<group>"; };
+		A3D1050C1D8541C700AC2BA2 /* FloorPlanDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanDisplayView.m; sourceTree = "<group>"; };
 		A3E217AB1D838A3500464B34 /* MapInside.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapInside.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E217AF1D838A3500464B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3E217B11D838A3500464B34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -237,6 +240,15 @@
 			name = LocationManager;
 			sourceTree = "<group>";
 		};
+		A3D1050E1D8541CA00AC2BA2 /* Floor Plan Display View */ = {
+			isa = PBXGroup;
+			children = (
+				A3D1050B1D8541C700AC2BA2 /* FloorPlanDisplayView.h */,
+				A3D1050C1D8541C700AC2BA2 /* FloorPlanDisplayView.m */,
+			);
+			name = "Floor Plan Display View";
+			sourceTree = "<group>";
+		};
 		A3E217A21D838A3500464B34 = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +345,7 @@
 			children = (
 				A3F9EE891D845C1000615E7E /* FloorPlanRecordingViewController.h */,
 				A3F9EE8A1D845C1000615E7E /* FloorPlanRecordingViewController.m */,
+				A3D1050E1D8541CA00AC2BA2 /* Floor Plan Display View */,
 			);
 			name = "Recording Path Controller";
 			sourceTree = "<group>";
@@ -484,6 +497,7 @@
 				A3D105011D850DA500AC2BA2 /* LGSingleDeviceManager.m in Sources */,
 				A3F9EEB21D847B0800615E7E /* SCLTextView.m in Sources */,
 				A3F9EE991D84714900615E7E /* CalibrationManager.m in Sources */,
+				A3D1050D1D8541C700AC2BA2 /* FloorPlanDisplayView.m in Sources */,
 				A3F9EE861D845BB500615E7E /* FloorPlanPreRecordingViewController.m in Sources */,
 				A3F9EEB11D847B0800615E7E /* SCLSwitchView.m in Sources */,
 				A3D104341D84FC1200AC2BA2 /* APSegmentedControl.m in Sources */,

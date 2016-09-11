@@ -27,7 +27,7 @@
 - (void)startRecordingPath;
 - (void)stopRecordingPath;
 - (void)markPointOfInterest:(NSString*)pointName description:(NSString*)pointDescription;
-- (NSString*)markPoint;
+- (NSString*)markPoint:(float)direction;
 
 - (void)pauseRecording;
 - (void)resumeRecording;

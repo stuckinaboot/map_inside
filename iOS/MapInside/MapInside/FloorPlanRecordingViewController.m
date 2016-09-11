@@ -29,9 +29,11 @@
     isWalking = !isWalking;
     if (!isWalking) {
         [markPtBtn setTitle:@"Stopped" forState:UIControlStateNormal];
-        [backendManager markPoint];
+        [backendManager markPoint:lastMarkedDirection];
         pulsingHalo.hidden = YES;
     } else {
+        lastMarkedDirection = [backendManager getCompassDirection];
+        lastMarkedDirection = kNearestMultiple * floor((lastMarkedDirection/kNearestMultiple)+0.5);
         [markPtBtn setTitle:@"Walking" forState:UIControlStateNormal];
         pulsingHalo.hidden = NO;
     }
@@ -85,6 +87,11 @@
     [pulsingHalo start];
     
     if (singleDeviceManager) {
+        
+        CGRect screen = [[UIScreen mainScreen] bounds];
+        
+//        CGPoint prev = CGPointZero;
+        __block float currentFoot = 1.0;
         [singleDeviceManager setUpdateHandler:^(NSData *data, NSError *error) {
             if (data && isWalking) {
                 NSString *readableStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -93,6 +100,8 @@
                 NSString *travelStr = [NSString stringWithFormat:@"%@, %.02f", readableStr, compassDirection];
                 
                 //Call Fischer's view with the travelStr
+                [floorPlanDisplayView updateDrawingForTravelStr:travelStr];
+
                 [fullOutput appendFormat:@"%@\n", travelStr];
             }
         }];
@@ -100,15 +109,17 @@
         updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(updateRecording) userInfo:nil repeats:YES];
     }
     
+    [floorPlanDisplayView setUp];
     [backendManager startRecordingPath];
     [self markPoint:nil];
 }
 
 - (void)updateRecording {
     if (isWalking) {
-        NSString *travelStr = [backendManager markPoint];
+        NSString *travelStr = [backendManager markPoint:lastMarkedDirection];
         
-        //Call Fischer's view with the travelStr
+        [floorPlanDisplayView updateDrawingForTravelStr:travelStr];
+        
         [fullOutput appendFormat:@"%@\n", travelStr];
     }
 }
@@ -121,9 +132,6 @@
         [self markPoint:nil];
     }
     [backendManager stopRecordingPath];
-//    NSArray *path = [backendManager stopRecordingPath];
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:path options:0 error:nil];
-//    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     return fullOutput;
 }
@@ -154,6 +162,33 @@
         NSString *finalOutput = [NSString stringWithFormat:@"%@%@", locStr, fullOutput];
         [vc setFloorPlanFullOutput:finalOutput];
     }
+}
+
+#pragma mark - Drawing
+- (void)drawDotWithRadius:(float)radius atX:(float)xcor atY:(float)ycor {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [[UIColor blueColor] CGColor];
+    shapeLayer.fillColor = [[UIColor blueColor] CGColor];
+    shapeLayer.lineWidth = 2.0;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(xcor, ycor, radius, radius)];
+    shapeLayer.path = [path CGPath];
+    
+    [self.view.layer addSublayer:shapeLayer];
+}
+
+- (void)drawLineFromX:(float)xcor1 Y:(float)ycor1 toX:(float)xcor2 Y: (float)ycor2 {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [[UIColor blackColor] CGColor];
+    shapeLayer.fillColor = [[UIColor blackColor] CGColor];
+    shapeLayer.lineWidth = 1.0;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(xcor1, ycor1)];
+    [path addLineToPoint:CGPointMake(xcor2, ycor2)];
+    
+    shapeLayer.path = [path CGPath];
+    [self.view.layer addSublayer:shapeLayer];
 }
 
 @end

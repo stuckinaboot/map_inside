@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FloorPlanRenderView.h"
+#import "FloorPlanDisplayView.h"
 
 @interface FloorPlanPostRecordingViewController : UIViewController {
-    IBOutlet FloorPlanRenderView *floorPlanRenderView;
+    IBOutlet FloorPlanDisplayView *floorPlanDisplayView;
     
     NSString *floorPlanFullOutput;
+    BOOL renderedFloorPlan;
 }
 - (IBAction)done:(id)sender;
 - (void)setFloorPlanFullOutput:(NSString*)output;

@@ -12,7 +12,9 @@
 #import "PulsingHaloLayer.h"
 #import "FloorPlanPostRecordingViewController.h"
 #import "LGBluetooth/LGSingleDeviceManager.h"
+#import "FloorPlanDisplayView.h"
 
+static const float kNearestMultiple = 30.0f;
 static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
 @interface FloorPlanRecordingViewController : UIViewController {
     FloorBackendManager *backendManager;
@@ -28,6 +30,10 @@ static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
     NSMutableString *fullOutput;
     
     NSTimer *updateTimer;
+    
+    IBOutlet FloorPlanDisplayView *floorPlanDisplayView;
+    
+    float lastMarkedDirection;
 }
 - (IBAction)markPoint:(id)sender;
 - (IBAction)markPlaceOfInterest:(id)sender;

@@ -45,12 +45,12 @@
     [path addObject:@{pointName: pointDescription}];
 }
 
-- (NSString*)markPoint {
+- (NSString*)markPoint:(float)direction {
     float totalDistance = [pedometerManager stopRecordingSteps];
-    NSArray *dataPoint = @[@(totalDistance), @([compasssManager getCurrentDirection])];
+    NSArray *dataPoint = @[@(totalDistance), @(direction)];
     [path addObject:dataPoint];
     
-    NSString *travelStr = [NSString stringWithFormat:@"l: 1, r: 1, f: 0, time: %d, angle: %.02f", (int)[[NSDate date] timeIntervalSince1970], [compasssManager getCurrentDirection]];
+    NSString *travelStr = [NSString stringWithFormat:@"l: 1, r: 1, f: 0, time: %d, angle: %.02f", (int)[[NSDate date] timeIntervalSince1970], direction];
     
     [pedometerManager startRecordingSteps];
     

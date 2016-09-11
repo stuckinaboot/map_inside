@@ -8,6 +8,8 @@
 
 #import "FloorPlanPreRecordingViewController.h"
 
+#import "LGBluetooth/LGBluetooth.h"
+
 @interface FloorPlanPreRecordingViewController ()
 
 @end
@@ -16,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    singleDeviceManager = [[LGSingleDeviceManager alloc] init];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -45,6 +49,7 @@
             if (!singleDeviceManager) {
                 singleDeviceManager = [[LGSingleDeviceManager alloc] init];
             }
+            
             [singleDeviceManager searchForDevice:kBluetoothDeviceID completion:^(BOOL deviceFound) {
                 if (deviceFound) {
                     __block BOOL displayOnce = FALSE;
