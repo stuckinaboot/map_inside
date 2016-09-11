@@ -9,8 +9,9 @@
 # Data is sent in the following form:
 #
 # ####################################
-#
-# l: <int>, r: <int>, f: <int>, time: <int>
+# 
+# lat: <user latitude>, lon: <user longitude>
+# l: <int>, r: <int>, f: <int>, time: <int>, angle: <float>
 # FOLLOWED BY NEWLINE FOR NEXT SAMPLE
 # 
 # l, f, r are ints representing the number of centimeters
@@ -20,29 +21,30 @@
 # The following is an example file for a 120cm wide hallway.
 #
 
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 59, r: 64, f: 0, time: 1473543271
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543281
-l: 61, r: 59, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543281
-l: 61, r: 59, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543281
-l: 61, r: 59, f: 0, time: 1473543271
-l: 61, r: 58, f: 0, time: 1473543271
-l: 60, r: 60, f: 0, time: 1473543271
-l: 61, r: 59, f: 0, time: 1473543281
-l: 60, r: 60, f: 0, time: 1473543281
+lat: 44.32113, lon: 21.121212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 59, r: 64, f: 0, time: 1473543271, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543281, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543281, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543281, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 58, f: 0, time: 1473543271, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543271, angle: 170.1212
+l: 61, r: 59, f: 0, time: 1473543281, angle: 170.1212
+l: 60, r: 60, f: 0, time: 1473543281, angle: 170.1212
 l: 58, r: 0, f: 0, time: 1473543281 # Begin wide hallway to right
 l: 60, r: 0, f: 0, time: 1473543281
 l: 61, r: 0, f: 0, time: 1473543281
