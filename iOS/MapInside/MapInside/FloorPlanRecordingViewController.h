@@ -11,6 +11,7 @@
 #import "SCLAlertView.h"
 #import "PulsingHaloLayer.h"
 #import "FloorPlanPostRecordingViewController.h"
+#import "LGBluetooth/LGSingleDeviceManager.h"
 
 static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
 @interface FloorPlanRecordingViewController : UIViewController {
@@ -21,6 +22,12 @@ static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
     IBOutlet UIButton *markPtBtn;
     IBOutlet UIImageView *pulsingHaloContainer;
     PulsingHaloLayer *pulsingHalo;
+    
+    LGSingleDeviceManager *singleDeviceManager;
+    
+    NSMutableString *fullOutput;
+    
+    NSTimer *updateTimer;
 }
 - (IBAction)markPoint:(id)sender;
 - (IBAction)markPlaceOfInterest:(id)sender;
@@ -28,4 +35,6 @@ static const NSString *kSegueToPostRecording = @"RecordingToPostRecordingSegue";
 - (void)setUp;
 - (void)beginRecording;
 - (void)setVelocity:(float)vel;
+
+- (void)setBluetoothDeviceManager:(LGSingleDeviceManager*)device;
 @end

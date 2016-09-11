@@ -23,14 +23,14 @@
     [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)setFloorPlanJSONRepresentation:(NSString*)jsonRepresentation {
-    floorPlanJson = jsonRepresentation;
+- (void)setFloorPlanFullOutput:(NSString *)output {
+    floorPlanFullOutput = output;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [floorPlanRenderView renderFloorPlan:floorPlanJson];
+//    [floorPlanRenderView renderFloorPlan:floorPlanJson];
 }
 
 - (void)didReceiveMemoryWarning {

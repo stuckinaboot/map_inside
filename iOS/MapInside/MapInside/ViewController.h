@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FloorBackendManager.h"
 #import "FloorPlanPreRecordingViewController.h"
+#import "SCLAlertView/SCLAlertView.h"
 
 static const NSString *kSegueToPreRecording = @"HomeToPreRecordingSegue";
 @interface ViewController : UIViewController {
@@ -17,5 +18,6 @@ static const NSString *kSegueToPreRecording = @"HomeToPreRecordingSegue";
 
 @property (nonatomic, strong) FloorBackendManager *backendManager;
 - (IBAction)goToPreRecording:(id)sender;
+- (IBAction)about:(id)sender;
 @end
 

@@ -39,6 +39,8 @@
 - (void)subscribeToNotificationsForService:(NSString*)serviceName
                             characteristic:(NSString*)characteristicName
                                   onUpdate:(void (^ _Nonnull)(NSData *, NSError *))updateHandler {
+    mainUpdateHandler = updateHandler;
+    
     [device connectWithCompletion:^(NSError *error) {
         [device discoverServicesWithCompletion:^(NSArray *services, NSError *error) {
             for (LGService *service in services) {
@@ -46,9 +48,12 @@
                     [service discoverCharacteristicsWithCompletion:^(NSArray *characteristics, NSError *error) {
                         for (LGCharacteristic *charact in characteristics) {
                             if ([charact.UUIDString isEqualToString:characteristicName]) {
-                                [charact setNotifyValue:YES completion:nil
-                                               onUpdate:^(NSData *data, NSError *error) {
-                                    updateHandler(data, error);
+                                [charact setNotifyValue:YES completion:^(NSError *error) {
+                                    if (mainUpdateHandler)
+                                        mainUpdateHandler(NULL, error);
+                                } onUpdate:^(NSData *data, NSError *error) {
+                                    if (mainUpdateHandler)
+                                        mainUpdateHandler(data, error);
                                 }];
                                 break;
                             }
@@ -58,6 +63,14 @@
             }
         }];
     }];
+}
+
+- (void)setUpdateHandler:(void (^_Nonnull)(NSData *data, NSError *error))updateHandler {
+    mainUpdateHandler = updateHandler;
+}
+
+- (void)disconnect {
+    [device disconnectWithCompletion:nil];
 }
 
 @end

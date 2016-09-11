@@ -6,16 +6,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/FloorPlanRenderView.m"
-            timestampString = "495233483.735828"
+            filePath = "MapInside/FloorPlanPreRecordingViewController.m"
+            timestampString = "495266479.352898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-renderFloorPlan:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-segmentedControl:buttonSelectedForButtonName:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FloorPlanPreRecordingViewController segmentedControl:buttonSelectedForButtonName:]"
+                  moduleName = "MapInside"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Stuckinaboot/Documents/PennApps16Fall/iOS/MapInside/MapInside/FloorPlanPreRecordingViewController.m"
+                  timestampString = "495267192.259899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__84-[FloorPlanPreRecordingViewController segmentedControl:buttonSelectedForButtonName:]_block_invoke"
+                  moduleName = "MapInside"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Stuckinaboot/Documents/PennApps16Fall/iOS/MapInside/MapInside/FloorPlanPreRecordingViewController.m"
+                  timestampString = "495267192.260246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MapInside/FloorPlanPreRecordingViewController.m"
+            timestampString = "495266479.352898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-segmentedControl:buttonSelectedForButtonName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +73,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/FloorPlanRenderView.m"
-            timestampString = "495233483.735828"
+            filePath = "MapInside/FloorPlanPreRecordingViewController.m"
+            timestampString = "495266455.2296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-renderFloorPlan:"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-viewDidLayoutSubviews"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MapInside/FloorPlanPreRecordingViewController.m"
+            timestampString = "495266475.730376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-viewDidLayoutSubviews"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapInside/FloorPlanRenderView.m"
-            timestampString = "495233483.735828"
+            filePath = "MapInside/FloorPlanPostRecordingViewController.m"
+            timestampString = "495266908.978309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "-renderFloorPlan:"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-setFloorPlanFullOutput:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

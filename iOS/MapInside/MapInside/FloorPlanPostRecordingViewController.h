@@ -12,8 +12,8 @@
 @interface FloorPlanPostRecordingViewController : UIViewController {
     IBOutlet FloorPlanRenderView *floorPlanRenderView;
     
-    NSString *floorPlanJson;
+    NSString *floorPlanFullOutput;
 }
 - (IBAction)done:(id)sender;
-- (void)setFloorPlanJSONRepresentation:(NSString*)jsonRepresentation;
+- (void)setFloorPlanFullOutput:(NSString*)output;
 @end

@@ -23,9 +23,13 @@
 }
 
 - (IBAction)goToPreRecording:(id)sender {
-    [self presentViewController:preRecordingViewController animated:YES completion:^{
-        
-    }];
+    [self presentViewController:preRecordingViewController animated:YES completion:nil];
+}
+
+- (IBAction)about:(id)sender {
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    
+    [alert showInfo:self title:@"About" subTitle:@"Developed by\nThe Platypus Project" closeButtonTitle:@"Dismiss" duration:0];
 }
 
 

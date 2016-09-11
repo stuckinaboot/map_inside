@@ -16,6 +16,7 @@
 
 - (void)setUp {
     backendManager = [[FloorBackendManager alloc] init];
+    singleDeviceManager = NULL;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -23,6 +24,7 @@
     
     [self beginRecording];
 }
+
 - (IBAction)markPoint:(id)sender {
     isWalking = !isWalking;
     if (!isWalking) {
@@ -73,6 +75,8 @@
     pulsingHalo.pulseInterval = 0.1f;
     pulsingHalo.haloLayerNumber = 10;
     
+    fullOutput = [[NSMutableString alloc] init];
+    
     isWalking = TRUE;
     [self performSelector:@selector(beginRecordingOnBackend) withObject:nil afterDelay:1.5f];
 }
@@ -80,21 +84,56 @@
 - (void)beginRecordingOnBackend {
     [pulsingHalo start];
     
+    if (singleDeviceManager) {
+        [singleDeviceManager setUpdateHandler:^(NSData *data, NSError *error) {
+            if (data && isWalking) {
+                NSString *readableStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                double compassDirection = [backendManager getCompassDirection];
+                
+                NSString *travelStr = [NSString stringWithFormat:@"%@, %.02f", readableStr, compassDirection];
+                
+                //Call Fischer's view with the travelStr
+                [fullOutput appendFormat:@"%@\n", travelStr];
+            }
+        }];
+    } else {
+        updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(updateRecording) userInfo:nil repeats:YES];
+    }
+    
     [backendManager startRecordingPath];
     [self markPoint:nil];
 }
 
+- (void)updateRecording {
+    if (isWalking) {
+        NSString *travelStr = [backendManager markPoint];
+        
+        //Call Fischer's view with the travelStr
+        [fullOutput appendFormat:@"%@\n", travelStr];
+    }
+}
+
 - (NSString*)stopRecording {
-    [self markPoint:nil];
-    NSArray *path = [backendManager stopRecordingPath];
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:path options:0 error:nil];
-    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    if (updateTimer) {
+        [updateTimer invalidate];
+        updateTimer = nil;
+        
+        [self markPoint:nil];
+    }
+    [backendManager stopRecordingPath];
+//    NSArray *path = [backendManager stopRecordingPath];
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:path options:0 error:nil];
+//    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
-    return jsonStr;
+    return fullOutput;
 }
 
 - (void)setVelocity:(float)vel {
     [backendManager setVelocity:vel];
+}
+
+- (void)setBluetoothDeviceManager:(LGSingleDeviceManager*)device {
+    singleDeviceManager = device;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,7 +148,7 @@
     if ([segue.identifier isEqualToString:kSegueToPostRecording]) {
         NSString *jsonRep = [self stopRecording];
         FloorPlanPostRecordingViewController *vc = (FloorPlanPostRecordingViewController*)segue.destinationViewController;
-        [vc setFloorPlanJSONRepresentation:jsonRep];
+        [vc setFloorPlanFullOutput:fullOutput];
     }
 }
 

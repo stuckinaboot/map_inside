@@ -19,21 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yr-WO-Pib">
-                                <rect key="frame" x="204" y="129" width="30" height="30"/>
-                                <state key="normal" title="Fish"/>
-                                <connections>
-                                    <action selector="goToPreRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VS7-k4-rMV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25E-Pc-57j">
-                                <rect key="frame" x="155" y="212" width="291" height="157"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25E-Pc-57j" customClass="MVMaterialButton">
+                                <rect key="frame" x="155" y="152" width="291" height="157"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="157" id="k2e-VH-6BC"/>
                                     <constraint firstAttribute="width" constant="291" id="x7M-fb-rk4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +42,7 @@
                                     <constraint firstAttribute="width" priority="999" constant="380" id="tlc-L5-ePO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -57,13 +50,37 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yr-WO-Pib">
+                                <rect key="frame" x="204" y="129" width="30" height="30"/>
+                                <state key="normal" title="Fish"/>
+                                <connections>
+                                    <action selector="goToPreRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VS7-k4-rMV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di7-Bk-3BI" customClass="MVMaterialButton">
+                                <rect key="frame" x="155" y="364" width="291" height="157"/>
+                                <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="3iX-1o-Zwb"/>
+                                    <constraint firstAttribute="width" constant="291" id="ZSQ-sK-ctW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y75-OA-sNg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="25E-Pc-57j" secondAttribute="bottom" constant="231" id="LzB-AP-CPq"/>
+                            <constraint firstItem="Di7-Bk-3BI" firstAttribute="top" secondItem="25E-Pc-57j" secondAttribute="bottom" constant="55" id="1XD-Si-7mI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="25E-Pc-57j" secondAttribute="bottom" constant="291" id="LzB-AP-CPq"/>
                             <constraint firstItem="25E-Pc-57j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sc4-Tt-FN8"/>
                             <constraint firstItem="dDU-RF-oXg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="SzO-Ig-uaK"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="dDU-RF-oXg" secondAttribute="trailing" constant="10" id="W6s-ns-6Ee"/>
+                            <constraint firstItem="Di7-Bk-3BI" firstAttribute="leading" secondItem="25E-Pc-57j" secondAttribute="leading" id="fDL-TK-BP4"/>
                             <constraint firstItem="dDU-RF-oXg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIV-kw-Bx5"/>
                         </constraints>
                         <variation key="default">
@@ -96,7 +113,7 @@
                                     <constraint firstAttribute="height" constant="68" id="rUJ-t0-QOY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -113,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="68" id="oA1-oK-fuw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -122,7 +139,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-YV-KKn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-YV-KKn" customClass="MVMaterialButton">
                                 <rect key="frame" x="155" y="224" width="291" height="157"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -137,7 +154,7 @@
                                     <action selector="startCalibrating:" destination="xeY-y2-veu" eventType="touchUpInside" id="mEm-ej-0dS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuH-5y-iT0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuH-5y-iT0" customClass="MVMaterialButton">
                                 <rect key="frame" x="155" y="403" width="291" height="157"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -185,45 +202,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-qb-VRG">
-                                <rect key="frame" x="155" y="79" width="291" height="157"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-X2-TKh" customClass="MVMaterialButton">
+                                <rect key="frame" x="164" y="419" width="273" height="150"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="291" id="MEW-e5-1mM"/>
-                                    <constraint firstAttribute="height" constant="157" id="rgU-WQ-lDC"/>
+                                    <constraint firstAttribute="height" constant="150" id="NrO-8L-03v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Calibrate">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xeY-y2-veu" kind="show" identifier="PreRecordingToCalibrateSegue" id="gV7-lu-uWb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-X2-TKh">
-                                <rect key="frame" x="155" y="385" width="291" height="157"/>
-                                <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="291" id="nX3-vK-tdJ"/>
-                                    <constraint firstAttribute="height" constant="157" id="pOI-Go-XdG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Start Recording">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Record">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="6BE-Df-TEl" kind="show" identifier="PreRecordingToRecordingSegue" id="exv-uG-AXr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-yo-Q9k" customClass="APSegmentedControl">
+                                <rect key="frame" x="164" y="234" width="273" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-Hz-1rE" customClass="MVMaterialButton">
+                                <rect key="frame" x="164" y="52" width="273" height="150"/>
+                                <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="HXd-22-5tD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="3dZ-Ra-t5w" eventType="touchUpInside" id="SBS-C0-4yz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nMB-X2-TKh" firstAttribute="centerX" secondItem="E5M-qb-VRG" secondAttribute="centerX" id="PTL-B2-h4I"/>
-                            <constraint firstItem="5Rb-7r-2t9" firstAttribute="top" secondItem="nMB-X2-TKh" secondAttribute="bottom" constant="58" id="PWp-8e-Wwq"/>
-                            <constraint firstItem="E5M-qb-VRG" firstAttribute="top" secondItem="OgF-s9-9Ze" secondAttribute="bottom" constant="59" id="bbA-UP-DVc"/>
-                            <constraint firstItem="nMB-X2-TKh" firstAttribute="centerX" secondItem="gto-WC-bB0" secondAttribute="centerX" id="nAO-cK-aln"/>
+                            <constraint firstItem="TG5-Hz-1rE" firstAttribute="trailing" secondItem="ciH-yo-Q9k" secondAttribute="trailing" id="7tg-dp-7io"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="top" secondItem="OgF-s9-9Ze" secondAttribute="bottom" constant="8" symbolic="YES" id="GZ8-QV-yVh"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="top" secondItem="OgF-s9-9Ze" secondAttribute="bottom" constant="214" id="Ghy-NW-UNe"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="trailing" secondItem="nMB-X2-TKh" secondAttribute="trailing" id="JaY-3t-ZRv"/>
+                            <constraint firstItem="TG5-Hz-1rE" firstAttribute="leading" secondItem="ciH-yo-Q9k" secondAttribute="leading" id="NzI-aX-tYL"/>
+                            <constraint firstItem="nMB-X2-TKh" firstAttribute="leading" secondItem="ciH-yo-Q9k" secondAttribute="leading" id="OBq-OW-8r9"/>
+                            <constraint firstItem="nMB-X2-TKh" firstAttribute="top" secondItem="ciH-yo-Q9k" secondAttribute="bottom" constant="35" id="WFQ-Fs-8Zg"/>
+                            <constraint firstItem="nMB-X2-TKh" firstAttribute="trailing" secondItem="ciH-yo-Q9k" secondAttribute="trailing" id="YSX-xz-v6F"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="top" secondItem="TG5-Hz-1rE" secondAttribute="bottom" constant="32" id="oSg-DU-jUm"/>
+                            <constraint firstItem="5Rb-7r-2t9" firstAttribute="top" secondItem="nMB-X2-TKh" secondAttribute="bottom" constant="31" id="xZC-uE-heD"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="centerX" secondItem="gto-WC-bB0" secondAttribute="centerX" id="xZj-e7-3bL"/>
+                            <constraint firstItem="ciH-yo-Q9k" firstAttribute="leading" secondItem="nMB-X2-TKh" secondAttribute="leading" id="zSC-gn-jgI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GZ8-QV-yVh"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="dataInputControl" destination="ciH-yo-Q9k" id="NHe-ng-wHk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u79-Y0-XUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +283,7 @@
                                     <constraint firstAttribute="width" constant="284" id="huo-JT-yDs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -256,7 +291,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-gi-3cS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-gi-3cS" customClass="MVMaterialButton">
                                 <rect key="frame" x="111" y="96" width="379" height="58"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -276,7 +311,7 @@
                                     <action selector="markPoint:" destination="6BE-Df-TEl" eventType="touchUpInside" id="coH-ek-UPn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-Dr-WCN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-Dr-WCN" customClass="MVMaterialButton">
                                 <rect key="frame" x="112" y="507" width="377" height="80"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -297,7 +332,7 @@
                                     <constraint firstAttribute="width" priority="750" constant="379" id="AMq-mz-hxI"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-94-DQP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-94-DQP" customClass="MVMaterialButton">
                                 <rect key="frame" x="112" y="180" width="378" height="58"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -364,14 +399,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Finished Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSz-dP-iGJ">
-                                <rect key="frame" x="112" y="28" width="378" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSz-dP-iGJ">
+                                <rect key="frame" x="111" y="28" width="378" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-MD-M7e">
-                                <rect key="frame" x="112" y="417" width="378" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-MD-M7e" customClass="MVMaterialButton">
+                                <rect key="frame" x="111" y="417" width="378" height="60"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rU4-MD-M7e" secondAttribute="height" multiplier="63:10" id="gPD-cc-kre"/>
@@ -382,8 +417,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXE-vG-CO3">
-                                <rect key="frame" x="112" y="493" width="378" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXE-vG-CO3" customClass="MVMaterialButton">
+                                <rect key="frame" x="111" y="493" width="378" height="60"/>
                                 <color key="backgroundColor" red="0.31153715030000001" green="0.68844417489999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OXE-vG-CO3" secondAttribute="height" multiplier="63:10" id="rJK-gz-3mb"/>
@@ -396,8 +431,8 @@
                                     <action selector="done:" destination="DtY-Rs-hbb" eventType="touchUpInside" id="f9R-2B-xq9"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-7w-2EN" customClass="FloorPlanRenderView">
-                                <rect key="frame" x="112" y="90" width="378" height="292"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-7w-2EN" customClass="FloorPlanRenderView">
+                                <rect key="frame" x="111" y="90" width="378" height="292"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
