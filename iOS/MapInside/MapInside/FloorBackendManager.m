@@ -19,18 +19,26 @@
         compasssManager = [[CompassManager alloc] init];
         [compasssManager startRecordingDirection];
         
+        locationManager = [[LocationManager alloc] init];
+        
         path = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)startRecordingPath {
+    [locationManager startUpdating];
     [pedometerManager startRecordingSteps];
 }
 
 - (void)stopRecordingPath {
+    lastKnownLocation = [locationManager getLastKnownLocation];
     [pedometerManager stopRecordingSteps];
 //    return path;
+}
+
+- (CLLocationCoordinate2D)getLastKnownLocation {
+    return lastKnownLocation;
 }
 
 - (void)markPointOfInterest:(NSString*)pointName description:(NSString*)pointDescription {
@@ -42,7 +50,7 @@
     NSArray *dataPoint = @[@(totalDistance), @([compasssManager getCurrentDirection])];
     [path addObject:dataPoint];
     
-    NSString *travelStr = [NSString stringWithFormat:@"l: 1, r: 1, f: 0, time: %f, %.02f", [[NSDate date] timeIntervalSince1970], [compasssManager getCurrentDirection]];
+    NSString *travelStr = [NSString stringWithFormat:@"l: 1, r: 1, f: 0, time: %d, angle: %.02f", (int)[[NSDate date] timeIntervalSince1970], [compasssManager getCurrentDirection]];
     
     [pedometerManager startRecordingSteps];
     

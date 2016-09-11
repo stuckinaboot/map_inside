@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CompassManager.h"
 #import "PedometerManager.h"
+#import "LocationManager.h"
 #import "LGBluetooth/LGSingleDeviceManager.h"
 
 @protocol FloorBackendManager <NSObject>
@@ -17,7 +18,10 @@
 @interface FloorBackendManager : NSObject {
     PedometerManager *pedometerManager;
     CompassManager *compasssManager;
+    LocationManager *locationManager;
     NSMutableArray *path;
+    
+    CLLocationCoordinate2D lastKnownLocation;
 }
 @property (nonatomic) id delegate;
 - (void)startRecordingPath;
@@ -27,6 +31,8 @@
 
 - (void)pauseRecording;
 - (void)resumeRecording;
+
+- (CLLocationCoordinate2D)getLastKnownLocation;
 
 - (double)getCompassDirection;
 

@@ -148,7 +148,11 @@
     if ([segue.identifier isEqualToString:kSegueToPostRecording]) {
         NSString *jsonRep = [self stopRecording];
         FloorPlanPostRecordingViewController *vc = (FloorPlanPostRecordingViewController*)segue.destinationViewController;
-        [vc setFloorPlanFullOutput:fullOutput];
+        CLLocationCoordinate2D lastKnownLocation = [backendManager getLastKnownLocation];
+        NSString *locStr = [NSString stringWithFormat:@"lat: %f, lon: %f\n", lastKnownLocation.latitude, lastKnownLocation.longitude];
+        
+        NSString *finalOutput = [NSString stringWithFormat:@"%@%@", locStr, fullOutput];
+        [vc setFloorPlanFullOutput:finalOutput];
     }
 }
 

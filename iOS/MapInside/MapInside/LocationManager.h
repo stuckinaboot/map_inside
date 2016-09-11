@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface LocationManager : NSObject
-
+@interface LocationManager : NSObject <CLLocationManagerDelegate> {
+    CLLocationManager *locManager;
+    CLLocationCoordinate2D lastKnownLocation;
+}
+- (void)startUpdating;
+- (CLLocationCoordinate2D)getLastKnownLocation;
+- (void)stopUpdating;
 @end

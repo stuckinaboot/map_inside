@@ -22,6 +22,7 @@
 		A3D105011D850DA500AC2BA2 /* LGSingleDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D104F91D850DA500AC2BA2 /* LGSingleDeviceManager.m */; };
 		A3D105021D850DA500AC2BA2 /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D104FB1D850DA500AC2BA2 /* LGUtils.m */; };
 		A3D105051D852DEB00AC2BA2 /* MVMaterialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D105041D852DEB00AC2BA2 /* MVMaterialButton.m */; };
+		A3D105091D8533DA00AC2BA2 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D105081D8533DA00AC2BA2 /* LocationManager.m */; };
 		A3E217B01D838A3500464B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217AF1D838A3500464B34 /* main.m */; };
 		A3E217B31D838A3500464B34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B21D838A3500464B34 /* AppDelegate.m */; };
 		A3E217B61D838A3500464B34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E217B51D838A3500464B34 /* ViewController.m */; };
@@ -77,6 +78,8 @@
 		A3D104FB1D850DA500AC2BA2 /* LGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUtils.m; sourceTree = "<group>"; };
 		A3D105031D852DEB00AC2BA2 /* MVMaterialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMaterialButton.h; sourceTree = "<group>"; };
 		A3D105041D852DEB00AC2BA2 /* MVMaterialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVMaterialButton.m; sourceTree = "<group>"; };
+		A3D105071D8533DA00AC2BA2 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		A3D105081D8533DA00AC2BA2 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		A3E217AB1D838A3500464B34 /* MapInside.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapInside.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E217AF1D838A3500464B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3E217B11D838A3500464B34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 				A38F9E551D83D197003AE794 /* Compass Manager */,
 				A38F9E541D83D190003AE794 /* Pedometer Manager */,
 				A38F9E581D83D1B0003AE794 /* Manager */,
+				A3D1050A1D8533DD00AC2BA2 /* LocationManager */,
 			);
 			name = "Floor Backend Manager";
 			sourceTree = "<group>";
@@ -222,6 +226,15 @@
 				A3D105041D852DEB00AC2BA2 /* MVMaterialButton.m */,
 			);
 			name = MVMaterialButton;
+			sourceTree = "<group>";
+		};
+		A3D1050A1D8533DD00AC2BA2 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				A3D105071D8533DA00AC2BA2 /* LocationManager.h */,
+				A3D105081D8533DA00AC2BA2 /* LocationManager.m */,
+			);
+			name = LocationManager;
 			sourceTree = "<group>";
 		};
 		A3E217A21D838A3500464B34 = {
@@ -467,6 +480,7 @@
 				A3F9EE8E1D845C2300615E7E /* FloorPlanPostRecordingViewController.m in Sources */,
 				A3F9EE951D84627200615E7E /* CalibrationViewController.m in Sources */,
 				A38F9E501D83D180003AE794 /* CompassManager.m in Sources */,
+				A3D105091D8533DA00AC2BA2 /* LocationManager.m in Sources */,
 				A3D105011D850DA500AC2BA2 /* LGSingleDeviceManager.m in Sources */,
 				A3F9EEB21D847B0800615E7E /* SCLTextView.m in Sources */,
 				A3F9EE991D84714900615E7E /* CalibrationManager.m in Sources */,

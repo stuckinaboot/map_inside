@@ -10,4 +10,33 @@
 
 @implementation LocationManager
 
+- (id)init {
+    if (self = [super init]) {
+        locManager = [[CLLocationManager alloc] init];
+        [locManager setDelegate:self];
+        [locManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        [locManager setDistanceFilter:kCLDistanceFilterNone];
+    }
+    return self;
+}
+
+- (void)startUpdating {
+    [locManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    if ([locations count] > 0) {
+        lastKnownLocation = locations[0].coordinate;
+        [self stopUpdating];
+    }
+}
+
+- (CLLocationCoordinate2D)getLastKnownLocation {
+    return lastKnownLocation;
+}
+
+- (void)stopUpdating {
+    [locManager stopUpdatingLocation];
+}
+
 @end
