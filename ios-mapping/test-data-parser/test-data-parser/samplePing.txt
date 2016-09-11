@@ -1,0 +1,113 @@
+# Awesome file format for sending speed data 
+# Comments can be thrown in with pounds.
+# 
+# ########################################################
+#
+# Data is sent every foot. Data will be sent every x feet. 
+# For the sake of this, lets say 1/4 foot.
+# 
+# Data is sent in the following form:
+#
+# ####################################
+#
+# l: <int>, r: <int>, f: <int>, time: <int>
+# FOLLOWED BY NEWLINE FOR NEXT SAMPLE
+# 
+# l, f, r are ints representing the number of centimeters
+# if no data is returned from the ping, send 0.
+# last is a unix timestamp (num seconds since Jan 01 1970)
+#
+# The following is an example file for a 120cm wide hallway.
+#
+
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 59, r: 64, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 60, r: 60, f: 0, time: 1473543281
+l: 58, r: 0, f: 0, time: 1473543281 # Begin wide hallway to right
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281
+l: 61, r: 0, f: 0, time: 1473543281
+l: 60, r: 0, f: 0, time: 1473543281 # End wide hallway to right
+l: 61, r: 58, f: 0, time: 1473543281
+l: 60, r: 60, f: 0, time: 1473543281
+l: 61, r: 58, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 127, r: 60, f: 0, time: 1473543281 # Begin closet to left
+l: 124, r: 62, f: 0, time: 1473543281
+l: 122, r: 60, f: 0, time: 1473543281
+l: 125, r: 58, f: 0, time: 1473543281
+l: 120, r: 59, f: 0, time: 1473543281
+l: 129, r: 60, f: 0, time: 1473543281
+l: 125, r: 60, f: 0, time: 1473543281
+l: 122, r: 57, f: 0, time: 1473543281
+l: 122, r: 59, f: 0, time: 1473543281
+l: 124, r: 58, f: 0, time: 1473543281
+l: 126, r: 60, f: 0, time: 1473543281
+l: 125, r: 60, f: 0, time: 1473543281
+l: 126, r: 59, f: 0, time: 1473543281
+l: 125, r: 62, f: 0, time: 1473543281
+l: 120, r: 61, f: 0, time: 1473543281
+l: 127, r: 62, f: 0, time: 1473543281 # End closet to left
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 64, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 58, r: 61, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 58, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
+l: 61, r: 59, f: 0, time: 1473543271
+l: 61, r: 58, f: 0, time: 1473543271
+l: 60, r: 60, f: 0, time: 1473543271
+l: 61, r: 59, f: 0, time: 1473543281
