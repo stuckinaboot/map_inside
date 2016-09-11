@@ -16,6 +16,10 @@
         [locManager setDelegate:self];
         [locManager setDesiredAccuracy:kCLLocationAccuracyBest];
         [locManager setDistanceFilter:kCLDistanceFilterNone];
+        
+        if ([locManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [locManager requestWhenInUseAuthorization];
+        }
     }
     return self;
 }
